@@ -2,9 +2,25 @@ window.onload = () => {
 
   // 初始第一个动画
   init();
-  // 初始第二动画
+  // 初始第二个动画
   window.requestAnimationFrame(clock);
+  // 初始第三个动画
+  initCanvas2()
 }
+
+function initCanvas2 (){
+	let canvas2 = document.querySelector('#canvas2')
+	let ctx = canvas2.getContext('2d')
+	
+	// ctx.fillStyle = 'black'
+	// ctx.fillRect(20, 20, 100, 100)
+	ctx.translate(canvas2.width/2, canvas2.height/2)
+	
+	ctx.rotate(Math.PI)
+	ctx.fillStyle = 'red'
+	ctx.fillRect(0, 0, 200, 200)
+}
+
 
 var sun = new Image();
 var moon = new Image();
